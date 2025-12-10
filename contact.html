@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Thor Arnouts</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+      defer
+    ></script>
+
+    <script src="js/map.js" defer></script>
+
+    <link rel="stylesheet" href="css/map.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md bg-light border-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="assets/images/Logo.png"
+            alt="Logo"
+            style="height: 40px"
+            class="me-2"
+          />
+          <span class="fw-bold text-uppercase" style="color: #28f088"
+            >Thor Arnouts</span
+          >
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projecten.html">Projecten</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container my-5 text-accent">
+      <h1 class="text-center mb-5" style="color: #80c7ef">Contact</h1>
+
+      <div
+        id="map"
+        style="height: 350px; border-radius: 10px"
+        class="mb-5"
+      ></div>
+
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-recaptcha="true"
+        class="mx-auto"
+        style="max-width: 600px"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+
+        <div class="mb-3">
+          <label for="naam" style="color: #80c7ef" class="form-label fw-bold"
+            >Naam:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="naam"
+            name="naam"
+            placeholder="Vul je naam in"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label
+            for="telefoon"
+            style="color: #80c7ef"
+            class="form-label fw-bold"
+            >Telefoonnummer:</label
+          >
+          <input
+            type="tel"
+            class="form-control"
+            id="telefoon"
+            name="telefoon"
+            placeholder="Vul je telefoonnummer in"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" style="color: #80c7ef" class="form-label fw-bold"
+            >E-mail:</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Vul je e-mailadres in"
+            required
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="bericht" style="color: #80c7ef" class="form-label fw-bold"
+            >Bericht:</label
+          >
+          <textarea
+            class="form-control"
+            id="bericht"
+            name="bericht"
+            rows="4"
+            placeholder="Schrijf hier je bericht..."
+            required
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <div data-netlify-recaptcha="true"></div>
+        </div>
+
+        <button type="submit" class="btn btn-accent w-100 py-2 fw-bold">
+          Verstuur
+        </button>
+      </form>
+
+      <hr class="my-5" />
+    </main>
+    <aside class="custom-aside p-3 mb-4">
+      <h4 class="aside-subtitle">Snelle links</h4>
+      <ul class="aside-links">
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="projecten.html"> Projecten</a></li>
+        <li><a href="contact.html"> Contact</a></li>
+      </ul>
+    </aside>
+
+    <footer class="container-fluid text-end pe-4 pb-3">
+      <p class="text-footer" style="color: #28f088">@Thor Arnouts</p>
+    </footer>
+  </body>
+</html>
